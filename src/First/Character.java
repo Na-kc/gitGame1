@@ -22,21 +22,41 @@ public class Character {
 		mGUID = guid;
 		
 		mItemManager = new ItemManager();
+		mSkillManager = new SkillManager();
 		
 		initItems();
+		initSkills();
 	}
 	
 	private void initItems() {
-		mItemManager.createItem(ItemDef.AXE,1);
-		mItemManager.createItem(ItemDef.PANTS,1);
-		mItemManager.createItem(ItemDef.HEALING_POTION,3);
+		getItem(ItemDef.AXE,1);
+		getItem(ItemDef.PANTS,1);
+		getItem(ItemDef.HEALING_POTION,3);
 	}
-	public boolean getItems(int itemCode, int itemCount) {
+	private void initSkills() {
+		getSkill(SkillDef.SWING,3);
+		getSkill(SkillDef.PUNCH,2);
+		getSkill(SkillDef.KICK,5);
+	}
+	
+	public static Character createCharacter(String name, long guid) {
+		return new Character(name, guid);
+	}
+	
+	public boolean getItem(int itemCode, int itemCount) {
 		mItems.add(mItemManager.createItem(itemCode, itemCount));
 		return true;
 	}
 	
 	public boolean removeItem(long guid) {
+		return true;
+	}
+	public boolean getSkill(int SkillCode, int Cowndown) {
+		mSkills.add(mSkillManager.createSkill(SkillCode, Cowndown));
+		return true;
+	}
+	
+	public boolean removeSkill(long guid) {
 		return true;
 	}
 }

@@ -1,6 +1,6 @@
 package First;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class Item {
 	private String mName;
@@ -8,7 +8,7 @@ public class Item {
 	private int mItemCount;
 	private long mGUID;
 	
-	private Scanner input = new Scanner(System.in);
+	//private Scanner input = new Scanner(System.in);
 	
 	public Item(String name, int itemCode, long guid, int itemCount) {
 		mName = name;
@@ -21,8 +21,8 @@ public class Item {
 		return new Item(name, itemCode, guid, itemCount);
 	}
 	
-	public void ItemUse() {
+	/*public void ItemUse() {
 		this.mItemCode = input.nextInt();
 		System.out.println(mItemCode + "번째 아이템을 사용하셨습니다.");
-	}
+	}*/
 }

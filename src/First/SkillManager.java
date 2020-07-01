@@ -3,7 +3,7 @@ package First;
 import java.util.HashMap;
 
 public class SkillManager {
-	private long mCurrentGUID = 1000000000L;
+	private long mCurrentGUID = 2000000000L;
 	
 	private HashMap mSkillMap = new HashMap();
 	
