@@ -39,10 +39,6 @@ public class Character {
 		getSkill(SkillDef.KICK,5);
 	}
 	
-	public static Character createCharacter(String name, long guid) {
-		return new Character(name, guid);
-	}
-	
 	public boolean getItem(int itemCode, int itemCount) {
 		mItems.add(mItemManager.createItem(itemCode, itemCount));
 		return true;

@@ -11,9 +11,10 @@ public class ItemManager {
 		initItems();
 	}
 	private void initItems() {
-		mItemMap.put(ItemDef.AXE, "AXE");
-		mItemMap.put(ItemDef.PANTS,"PANTS");
-		mItemMap.put(ItemDef.HEALING_POTION,"HEALING_POTION");
+		mItemMap.put(ItemDef.AXE, "Axe");
+		mItemMap.put(ItemDef.PANTS,"Pants");
+		mItemMap.put(ItemDef.SHIRT,"Shirt");
+		mItemMap.put(ItemDef.HEALING_POTION,"Healing_Potion");
 		
 	}
 	
@@ -29,4 +30,5 @@ public class ItemManager {
 		
 		return Item.createItem((String)itemNameObj, itemCode, getGuid(), itemCount);
 	}
+
 }

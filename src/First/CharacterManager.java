@@ -14,10 +14,9 @@ public class CharacterManager {
 	}
 	private void initNames() {
 		mNameMap.put(Server.HONGGILDONG, "Hong Gil-dong");
-		mNameMap.put(Server.CHEOLSU, "Cheol-su");
-		mNameMap.put(Server.YEONGHUI, "Yeong-hui");
-		mNameMap.put(Server.MINSU, "Min-su");
-		
+		mNameMap.put(Server.HERO, "Hero");
+		mNameMap.put(Server.WARRIOR, "Warrior");
+		mNameMap.put(Server.ARCHER, "Archer");
 	}
 
 	
@@ -25,16 +24,17 @@ public class CharacterManager {
 		mCurrentGUID += 1;
 		return mCurrentGUID;
 	}
-
+	
 	public Character createCharacter(String name) {
 		Object characterNameObj = mNameMap.get(name);
-		if (characterNameObj.equals(name)) {
-			System.out.println("이름 중복");
+		if(mNameMap.containsValue(name)) {
+			System.out.println("중복 이름");
 			return null;
 		}
 		else {
-			System.out.println(characterNameObj + " 캐릭터 생성");
-			return Character.createCharacter((String)characterNameObj, getGuid());
+			System.out.println(name + " 캐릭터 생성");
+			return new Character((String)characterNameObj, getGuid());
 		}
 	}
+
 }
