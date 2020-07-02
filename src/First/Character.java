@@ -31,6 +31,7 @@ public class Character {
 	private void initItems() {
 		getItem(ItemDef.AXE,1);
 		getItem(ItemDef.PANTS,1);
+		getItem(ItemDef.SHIRT,1);
 		getItem(ItemDef.HEALING_POTION,3);
 	}
 	private void initSkills() {
